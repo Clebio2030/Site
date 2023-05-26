@@ -28,6 +28,7 @@ main {
     border: var(--default-border);
     padding: 5.7rem;
     border-radius: var(--default-border-radius);
+    grid-area: form;
 }
 
 main h2 {
@@ -94,13 +95,9 @@ main footer a {
     ". . . ."
     ". hero . form"
     ". hero . form"
-    ". . . ."
+
     ;
     gap: 8.5rem;
-}
-
-main {
-    grid-area: form;
 }
 
 aside {
@@ -123,6 +120,74 @@ main form input {
     margin-bottom: 4rem;
 }
 
-.voltar {
-   font-size: 0.1rem;
+@media screen and (max-width: 800px)
+{
+    .content {
+        display: grid;
+        grid-template-areas: 
+        "."
+        "hero"
+        "form"
+        ".";
+        gap: 8.5rem;
+        justify-content: center;
+    }
+    aside {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    img {
+        margin: 0 auto;
+        width: 30rem;
+        height: 30rem;
+    }
+    main {
+        margin: auto;
+        width: 90%;
+    }
+    main h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 414px)
+{
+    .content {
+        display: grid;
+        grid-template-areas: 
+        "."
+        "hero"
+        "form"
+        ".";
+        gap: 8.5rem;
+        justify-content: center;
+    }
+    aside {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    img {
+        margin: 0 auto;
+        width: 20rem;
+        height: 20rem;
+    }
+    main {
+        margin: auto;
+        width: 90%;
+    }
+    main h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    main form input {
+        margin: auto;
+        width: 90%;
+        height: 3rem;
+    }
+    label {
+        font-size: 2rem;
+    }
 }
